@@ -1,0 +1,5 @@
+enable_testing()
+find_package(Threads REQUIRED)
+add_executable(is_prime is_prime.cpp)
+target_link_libraries(is_prime Threads::Threads)
+add_test(NAME is_prime COMMAND is_prime)
